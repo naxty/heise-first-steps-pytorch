@@ -1,0 +1,20 @@
+>>> import torch
+>>> torch.Tensor([[1, 2], [3, 4]]) # Initialisierung durch eine Liste
+tensor([[1, 2],
+        [3, 4]])
+>>> torch.rand(1, 5) # Zufälliger 1x5 Tensor
+tensor([[0.6700, 0.9993, 0.9326, 0.9286, 0.2964]])
+>>> torch.zeros(1, 2) # Erstellt einen 1x2 Tensor mit jeweils 0 befüllt
+tensor([[0., 0.]])
+>>> torch.ones(2,1)  # Erstellt einen 2x1 Tensor mit jeweils 1 befüllt
+tensor([[1.],
+        [1.]])
+>>> import numpy as np
+>>> A = np.array([1, 2, 3])
+>>> torch.from_numpy(A)
+tensor([1, 2, 3])
+>>> torch.Tensor([1, 2, 3]).numpy()
+array([1, 2, 3])
+>>> device = torch.device("cuda")
+>>> torch.rand(1,5).to(device)
+tensor([[0.2663, 0.4134, 0.1616, 0.7811, 0.1247]], device='cuda:0')
